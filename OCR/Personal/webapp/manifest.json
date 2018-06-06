@@ -1,0 +1,118 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "dataPersonal",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "dataPersonal.view.View1",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "dataPersonal.i18n.i18n"
+				}
+			}
+		},
+			"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"targetControl": "idAppControl",
+				"targetAggregation": "pages",
+				"clearTarget": false,
+				"bypassed": {
+					"target": "notFound"
+				}
+			},
+			"routes": {
+				"View1": {
+					"pattern": "",
+					"view": "Personal.view.View1"
+				},
+				"HomeView": {
+					"pattern": "View1/HomeView",
+					"view": "Personal.view.HomeView"
+				},
+				"PartDetails":{
+				"name": "partdetails",
+				"pattern": "partDetails/{id}",
+				"view": "dataPersonal.view.partdetails"
+			},
+			"gears":{
+				"name":"gears",
+				"pattern":"",
+				"view":"datapersonal.view.gears"
+			}
+				
+			},
+				"targets": {
+				"notFound": {
+					"viewName": "sap.iot.ain.lib.reusable.view.notFound.NotFound",
+					"transition": "show",
+					"controlId": "idAppControl",
+					"controlAggregation": "pages"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

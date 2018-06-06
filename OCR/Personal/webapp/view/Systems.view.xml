@@ -1,0 +1,28 @@
+<mvc:View controllerName="dataPersonal.controller.Systems" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	xmlns:suite="sap.suite.ui.commons">
+	<App backgroundImage="/media/settinger.jpg">
+		<Page backgroundDesign="Transparent" title="Systems" id="Systems" showHeader="false">
+			<IconTabBar  applyContentPadding="true" backgroundDesign="Transparent" id="systemnavid" select="onPressSelectIconTabFilter"
+				selectedKey="parts" expandable="true">
+				<items>
+					<IconTabFilter icon="/media/parts.png" id="systempartsid" key="parts" text="{i18n>systempartsimgtab}" class="systempartsclass">
+						<content></content>
+					</IconTabFilter>
+					<IconTabFilter icon="/media/circuitdiagram.png" id="systemcirdid" key="circuitdiagram" text="{i18n>systemcirdiagyab}"
+						class="systemcirdclass">
+						<content></content>
+					</IconTabFilter>
+					<IconTabFilter icon="/media/usecase.png" id="systemusecaseid" key="usecase" class="systemusecaseclass" text="{i18n>systemusecasetab}">
+						<content></content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			<NavContainer id="configurationsMenuNavContainer">
+						<pages>
+						
+						</pages>
+			</NavContainer>
+		</Page>
+	</App>
+</mvc:View>

@@ -1,0 +1,79 @@
+<mvc:View xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:suite="sap.suite.ui.commons" xmlns:layout="sap.ui.layout"
+	controllerName="dataPersonal.controller.HardwareUsed" xmlns:html="http://www.w3.org/1999/xhtml" width="100%">
+	<App backgroundImage="/media/1.jpg" backgroundOpacity="10%">
+		<Page backgroundDesign="Transparent" showHeader="true" title="Hardware status (Live Data)" showFooter="true" showNavButton="true"
+			navButtonPress="buttonpress">
+			<NavContainer id="configurationsMenuNavContainer">
+				<pages>
+					<HeaderContainer>
+						<VBox>
+							<HBox>
+								<OverflowToolbar></OverflowToolbar>
+							</HBox>
+							<HBox>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="RPM">
+									<TileContent footer="Maximum">
+										<content>
+											<NumericContent value="1200" valueColor="Error" indicator="Up" press="pressRPM"/>
+										</content>
+									</TileContent>
+								</GenericTile>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="WPM">
+									<TileContent footer="Moderate speed">
+										<content>
+											<NumericContent value="40" valueColor="Good" icon="sap-icon://eraser" press="pressWPM"/>
+										</content>
+									</TileContent>
+								</GenericTile>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Accuracy">
+									<TileContent footer="Average">
+										<content>
+											<NumericContent value="65%" icon="sap-icon://crossed-line-chart" press="pressAC"/>
+										</content>
+									</TileContent>
+								</GenericTile>
+								<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Heat generated">
+									<TileContent footer="Not Harmful">
+										<content>
+											<NumericContent press="pressHeat" scale="M" icon="sap-icon://unwired" value="30º C" valueColor="Critical" indicator="Down"/>
+										</content>
+									</TileContent>
+								</GenericTile>
+							</HBox>
+							<HBox>
+								<OverflowToolbar></OverflowToolbar>
+							</HBox>
+							<HBox>
+								<SlideTile>
+									<GenericTile backgroundImage="/media/ac.png" frameType="TwoByOne" press="pressOnTileOne">
+										<TileContent footer="Pages Scanned">
+											<NewsContent contentText="Total Pages Scanned" subheader="3"/>
+										</TileContent>
+									</GenericTile>
+								</SlideTile>
+								<ToolbarSeparator></ToolbarSeparator>
+								<ToolbarSeparator></ToolbarSeparator>
+								<ToolbarSeparator></ToolbarSeparator>
+								<ToolbarSeparator></ToolbarSeparator>
+								<ToolbarSeparator></ToolbarSeparator>
+								<ToolbarSeparator></ToolbarSeparator>
+								<ToolbarSeparator></ToolbarSeparator>
+								<SlideTile>
+									<GenericTile backgroundImage="/media/setting.jpg" frameType="TwoByOne" press="pressSettings">
+										<TileContent footer="Open settings">
+											<NewsContent contentText="Click to make changes to the settings" subheader="Settings"/>
+										</TileContent>
+									</GenericTile>
+								</SlideTile>
+							</HBox>
+						</VBox>
+					</HeaderContainer>
+				</pages>
+			</NavContainer>
+			<HBox>
+				<OverflowToolbar></OverflowToolbar>
+				<OverflowToolbar></OverflowToolbar>
+			</HBox>
+		</Page>
+	</App>
+</mvc:View>

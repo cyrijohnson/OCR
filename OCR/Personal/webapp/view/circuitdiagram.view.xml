@@ -1,0 +1,44 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout"
+	xmlns:reusableBlock="sap.iot.ain.lib.reusable.blocks" controllerName="dataPersonal.controller.circuitdiagram"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<uxap:ObjectPageLayout useIconTabBar="true" enableLazyLoading="true" showEditHeaderButton="false" showHeaderContent="true"
+		showTitleInHeaderContent="false">
+		<uxap:sections>
+			<uxap:ObjectPageSection title="SPECIFICATIONS">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Gear Logic">
+						<uxap:blocks>
+							<Text text="{i18n>cirgeardesc}"></Text>
+							<Image src="/media/gearcircuit.gif"></Image>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+				<uxap:subSections>
+				
+						<uxap:ObjectPageSubSection title="Stepper Connections">
+							<uxap:blocks>
+								<VBox>
+									<HBox>
+								<Image src="/media/arduinocircuit.jpg"></Image>
+							
+								<Text text="{i18n>cirarduinodesc}"></Text>
+								</HBox>
+								<OverflowToolbar></OverflowToolbar>
+								<HBox>
+								<Image src="/media/Stepperwires.png"></Image>
+								<Text text="{i18n>cirarduinodescp2}"></Text>
+								</HBox>
+							<OverflowToolbar></OverflowToolbar>
+								<HBox>
+								<Image src="/media/Stepperpic.jpg"></Image>
+								<Text text="{i18n>cirarduinodescp3}"></Text>
+								</HBox>
+								</VBox>
+								</uxap:blocks>
+					
+						</uxap:ObjectPageSubSection>
+					</uxap:subSections>
+				</uxap:ObjectPageSection>
+			</uxap:sections>
+		</uxap:ObjectPageLayout>
+	</mvc:View>

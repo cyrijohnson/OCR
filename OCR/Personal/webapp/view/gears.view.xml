@@ -1,0 +1,37 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:uxap="sap.uxap" xmlns:layout="sap.ui.layout"
+	xmlns:reusableBlock="sap.iot.ain.lib.reusable.blocks" controllerName="dataPersonal.controller.gears"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<uxap:ObjectPageLayout useIconTabBar="true" enableLazyLoading="true" showEditHeaderButton="false" showHeaderContent="true"
+		showTitleInHeaderContent="false">
+		<uxap:headerTitle>
+			<uxap:ObjectPageHeader showPlaceholder="true" headerDesign="Dark" objectSubtitle="4" objectImageURI="/media/gear.png"
+				isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true" isActionAreaAlwaysVisible="true" isObjectIconAlwaysVisible="true"
+				objectImageShape="Square" objectTitle="Gears"></uxap:ObjectPageHeader>
+		</uxap:headerTitle>
+		<uxap:sections>
+			<uxap:ObjectPageSection title="SPECIFICATIONS">
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Desctiption">
+						<uxap:blocks>
+							<Text text="{i18n>gearsdescription}"></Text>
+						</uxap:blocks>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+				<uxap:subSections>
+					<uxap:ObjectPageSubSection title="Learn More">
+						<uxap:blocks>
+							<Image src="/media/geargif.gif"></Image>
+						<Text  text="{i18n>stepperlearn}"></Text>
+						</uxap:blocks>
+						<uxap:actions>
+							<Button  text="See More Details" visible="true"
+								press="onPressDetails"></Button>
+							<Button  text="Watch Video Tutorials"
+								visible="true" press="onPressVideo"></Button>
+						</uxap:actions>
+					</uxap:ObjectPageSubSection>
+				</uxap:subSections>
+			</uxap:ObjectPageSection>
+		</uxap:sections>
+	</uxap:ObjectPageLayout>
+</mvc:View>

@@ -1,0 +1,68 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout"  xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+	xmlns:suite="sap.suite.ui.commons" 	
+	xmlns:mvc="sap.ui.core.mvc"  controllerName="dataPersonal.controller.Settings"
+	xmlns:html="http://www.w3.org/1999/xhtml" width="100%">
+		<App backgroundImage="/media/gif3.gif">
+		<Page backgroundDesign="Transparent">
+			
+	<List backgroundDesign="Transparent">
+		<InputListItem label="Camera">
+			<Switch state="true" />
+		</InputListItem>
+		<InputListItem label="Gesture Recognition">
+			<Switch state="true" />
+		</InputListItem>
+	
+		<InputListItem label="Energy Saving">
+			<Switch     state="false"  change="handleConfirmationMessageBoxPress" />
+		</InputListItem>
+		<InputListItem label="Page type">
+			<Select>
+				<core:Item key="A4" text="A4" />
+				<core:Item key="A3" text="A3" />
+				
+			</Select>
+		</InputListItem>
+		<InputListItem label="Save an intermediate .doc file">
+			<Switch state="true" />
+		</InputListItem>
+		<InputListItem label="Style of writing">
+			<Select>
+				<core:Item key="IT" text="Italics" />
+				<core:Item key="HB" text="Human Style" />
+				<core:Item key="BD" text="Bold" />
+				<core:Item key="SP" text="Shapes" />
+				<core:Item key="CP" text="Copy same" />
+			</Select>
+		</InputListItem>
+		<InputListItem label="Speed">
+			<Slider min="0" max="10" value="5" width="250px" />
+		</InputListItem>
+	</List>
+	<Toolbar>
+				<ToolbarSpacer/>
+					<Button type="Accept"
+						text="Save"
+						press="onSave"
+						>
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Button>
+				<Button type="Reject"
+						text="Discard"
+						press="handlediscardMessageBoxPress"
+						>
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+			    </Button>
+			    <ToolbarSpacer/>
+			</Toolbar>
+			<OverflowToolbar></OverflowToolbar>
+			<OverflowToolbar></OverflowToolbar>
+			
+			
+		</Page>
+	</App>
+	</mvc:View>

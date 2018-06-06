@@ -1,0 +1,178 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:uxap="sap.uxap"
+	xmlns:suite="sap.suite.ui.commons" xmlns:layout="sap.ui.layout" controllerName="dataPersonal.controller.AdminPro"
+	xmlns:html="http://www.w3.org/1999/xhtml" width="100%">
+	<App backgroundImage="/media/partsback.jpg" backgroundColor="white" backgroundOpacity="5%">
+	<Page backgroundDesign="Transparent" title="Details" id="AdminPro" showHeader="flase" navButtonPress="onButtonPressNavback">
+		<content>
+			<List backgroundDesign="Transparent" headerText="OCR Admin">
+				<items>
+					<StandardListItem title="{i18n>adminproNamedet}" description="{i18n>adminproName}" icon="/media/image.jpg" iconDensityAware="true" iconInset="false"
+						adaptTitleSize="true" press="itempress"/>
+				</items>
+			</List>
+			<OverflowToolbar class="ManufacturerDetails" id="Mdetails">
+				<Title text="{i18n>adminproTitle}" id="adminprotitleid" class="adminprotitleclass"></Title>
+			</OverflowToolbar>
+			<ToolbarSpacer></ToolbarSpacer>
+			<ToolbarSpacer></ToolbarSpacer>
+			<ToolbarSpacer></ToolbarSpacer>
+			<form:Form class="admindetformclass" id="admindetformid">
+				<form:layout>
+					<form:ResponsiveGridLayout columnsL="5" columnsM="5" labelSpanL="6" labelSpanM="6" labelSpanS="12"/>
+				</form:layout>
+				<form:formContainers>
+					<form:FormContainer>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminproDesc}" textAlign="Begin"></Label>
+							</form:label>
+							<form:fields>
+								<HBox>
+									<Text text="{i18n>adminproDescdet}"></Text>
+								</HBox>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminprosocmedmail}"></Label>
+							</form:label>
+							<form:fields>
+								<VBox>
+									<HBox>
+										<Link id="maillinkId" text="{i18n>adminprosocmedmaildet}" class="maillinkClass" press="onPressSendEmail"></Link>
+									</HBox>
+								</VBox>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminprosocmedF}"></Label>
+							</form:label>
+							<form:fields>
+								<VBox>
+									<HBox>
+										<Link id="fblinkId" text="{i18n>adminprosocmedFLtext}" class="fblinkClass" press="onPressFb"></Link>
+									</HBox>
+								</VBox>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminprosocmedT}"></Label>
+							</form:label>
+							<form:fields>
+								<VBox>
+									<HBox>
+										<Link id="twitterlinkId" text="{i18n>adminprosocmedTLtext}" class="twitterlinkClass" press="onPresstwitter"></Link>
+									</HBox>
+								</VBox>
+							</form:fields>
+						</form:FormElement>
+					</form:FormContainer>
+				</form:formContainers>
+			</form:Form>
+			<OverflowToolbar>
+				<Title text="{i18n>adminproconcepts}" id="adminproconid" class="adminproconclass"></Title>
+			</OverflowToolbar>
+			<form:Form>
+				<form:layout>
+					<form:ResponsiveGridLayout columnsL="5" columnsM="5" labelSpanL="6" labelSpanM="6" labelSpanS="12"/>
+				</form:layout>
+				<form:formContainers>
+					<form:FormContainer>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminproconceptsOCR}" textAlign="Begin"></Label>
+							</form:label>
+							<form:fields>
+								<HBox>
+									<Text text="{i18n>adminproconceptsOCRdet}"></Text>
+								</HBox>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminproconceptsML}" textAlign="Begin"></Label>
+							</form:label>
+							<form:fields>
+								<HBox>
+									<Text text="{i18n>adminproconceptsMLdet}"></Text>
+								</HBox>
+							</form:fields>
+						</form:FormElement>
+						<form:FormElement>
+							<form:label>
+								<Label text="{i18n>adminproconceptsArd}" textAlign="Begin"></Label>
+							</form:label>
+							<form:fields>
+								<HBox>
+									<Text text="{i18n>adminproconceptsArddet}"></Text>
+								</HBox>
+							</form:fields>
+						</form:FormElement>
+					</form:FormContainer>
+				</form:formContainers>
+			</form:Form>
+			<OverflowToolbar>
+				<Title text="{i18n>adminprolinksTitle}" id="adminprolinkid" class="adminprolinkclass"></Title>
+			</OverflowToolbar>
+			<form:Form>
+				<form:layout>
+					<form:ResponsiveGridLayout columnsL="3" columnsM="3" labelSpanL="6" labelSpanM="6" labelSpanS="12"/>
+				</form:layout>
+				<form:FormContainer>
+					<form:FormElement>
+						<form:label>
+							<Label text="{i18n>adminprolinks1}"></Label>
+						</form:label>
+						<form:fields>
+							<VBox>
+								<HBox>
+									<Link text="{i18n>adminprolinks1det}" press="onPresslink1"></Link>
+								</HBox>
+								<HBox>
+									<Text text="{i18n>adminprolinks1detail}"></Text>
+								</HBox>
+							</VBox>
+						</form:fields>
+					</form:FormElement>
+					<form:FormElement>
+						<form:label>
+							<Label text="{i18n>adminprolinks2}"></Label>
+						</form:label>
+						<form:fields>
+							<VBox>
+								<HBox>
+									<Link text="{i18n>adminprolinks2det}" press="onPresslink2"></Link>
+								</HBox>
+								<HBox>
+									<Text text="{i18n>adminprolinks2detail}"></Text>
+								</HBox>
+							</VBox>
+						</form:fields>
+					</form:FormElement>
+					<form:FormElement>
+						<form:label>
+							<Label text="{i18n>adminprolinks3}"></Label>
+						</form:label>
+						<form:fields>
+							<VBox>
+								<HBox>
+									<Link text="{i18n>adminprolinks3det}" press="onPresslink3"></Link>
+								</HBox>
+								<HBox></HBox>
+								<HBox>
+									<Text text="{i18n>adminprolinks3detail}"></Text>
+								</HBox>
+							</VBox>
+						</form:fields>
+					</form:FormElement>
+				</form:FormContainer>
+			</form:Form>
+			<OverflowToolbar>
+			
+			</OverflowToolbar>
+		</content>
+	</Page>
+	</App>
+</mvc:View>

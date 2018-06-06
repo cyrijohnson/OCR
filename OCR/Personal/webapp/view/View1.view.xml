@@ -1,0 +1,35 @@
+<mvc:View controllerName="dataPersonal.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	xmlns:suite="sap.suite.ui.commons">
+	<App>
+		<Page backgroundDesign="Transparent" title="{i18n>title}" titleLevel="H4" >
+			<content>
+				<tnt:ToolPage id="configMenuToolPage" sideExpanded="false">
+					<tnt:sideContent>
+						<tnt:SideNavigation id="configMenuSideNavigation" expanded="true" itemSelect="onNavigationItemSelectHandleDetailPage">
+							<tnt:NavigationList id="configMenuNavigationList" selectedKey="users">
+								<tnt:NavigationListItem text="iSoft" icon="sap-icon://menu2" key="open"></tnt:NavigationListItem>
+								<tnt:NavigationListItem id="navigationListUsersItem" class="help-id-ain-configuration-usersNavigationListItem" text="{i18n>userSideIcon}"
+									icon="sap-icon://person-placeholder" key="users"></tnt:NavigationListItem>
+								<tnt:NavigationListItem class="help-id-ain-configuration-systemsNavigationListItem" text="{i18n>systemSideIcon}"
+									enabled="{path:'mConfigScopeModel>/scope', formatter:'sap.iot.ain.manageconfigurations.utilities.Formatter.hidetabsforOtherRoles'}"
+									icon="sap-icon://sys-monitor" key="systems"></tnt:NavigationListItem>
+								<tnt:NavigationListItem class="help-id-ain-configuration-configuration-extensionNavigationListItem" text="{i18n>packSideIcon}"
+									enabled="{path:'mConfigScopeModel>/scope', formatter:'sap.iot.ain.manageconfigurations.utilities.Formatter.hidetabsforOtherRoles'}"
+									icon="sap-icon://electrocardiogram" key="dynamicSections"></tnt:NavigationListItem>
+								<tnt:NavigationListItem class="help-id-ain-configuration-generalApplicationSettingsNavigationListItem" text="{i18n>setSideIcon}"
+									enabled="{path:'mConfigScopeModel>/scope', formatter:'sap.iot.ain.manageconfigurations.utilities.Formatter.hidetabsforOtherRoles'}"
+									icon="sap-icon://settings" key="generalAppSettings"></tnt:NavigationListItem>
+							</tnt:NavigationList>
+						</tnt:SideNavigation>
+					</tnt:sideContent>
+					<tnt:mainContents>
+						<NavContainer id="configurationsMenuNavContainer">
+							<pages></pages>
+						</NavContainer>
+					</tnt:mainContents>
+				</tnt:ToolPage>
+			</content>
+		</Page>
+	</App>
+</mvc:View>

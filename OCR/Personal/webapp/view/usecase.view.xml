@@ -1,0 +1,8 @@
+<mvc:View controllerName="dataPersonal.controller.usecase" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	xmlns:suite="sap.suite.ui.commons">
+	<Page showHeader="true" title="Usecase">
+		
+		
+	</Page>
+	</mvc:View>
